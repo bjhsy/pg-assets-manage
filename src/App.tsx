@@ -1,28 +1,17 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Switch, Redirect } from 'react-router';
+import { HashRouter as Router } from 'react-router-dom';
+import LedgerList from './views/ledger/Ledger';
+import LedgerRegister from './views/ledger/Register';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+export default function() {
+  return (
+    <Router>
+      <Switch>
+        <Redirect path="/" exact to={{ pathname: '/ledger/list' }} />
+        <Route path="/ledger/list" component={LedgerList} />
+        <Route path="/ledger/register" component={LedgerRegister} />
+      </Switch>
+    </Router>
+  );
 }
-
-export default App;
