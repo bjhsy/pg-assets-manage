@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fyl080801/navijs": "git+ssh://git@github.com/bjhsy/navijs.git",
+    "@fyl080801/navijs": "../navijs",
     "@types/jest": "24.0.11",
     "@types/node": "11.13.0",
     "@types/react": "16.8.13",
