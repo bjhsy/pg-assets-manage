@@ -6,7 +6,7 @@ import zhCN from "antd/lib/locale-provider/zh_CN";
 import { bootstrap } from "@fyl080801/navijs";
 import { LocaleProvider } from "antd";
 import "antd/dist/antd.css";
-import "@fyl080801/navijs/lib/index.css";
+import "@fyl080801/navijs/src/index.css";
 
 bootstrap();
 
